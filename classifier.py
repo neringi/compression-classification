@@ -76,6 +76,7 @@ def classify_new_book(compressed_lengths, recompressed_lengths):
     predicted_author = min(res, key=res.get)
     return predicted_author
 
+print("\n\t ** A Program that Performs Classification By Zipping **\n \nInstructions: \n- Write the book tiltle that you want to classify\n- Once you're done, please type exit")
 while True:
     new_book_title = input("\nEnter the Book Title: ")
     if new_book_title.lower() =="exit":
