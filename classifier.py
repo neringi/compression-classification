@@ -46,8 +46,8 @@ def reconcatenate_books(new_title, titles):
 
 #we’ll compress the data using the zipping technique
 def compress_books(books):
-    print("length of compressed zlib: \n")
-    print(len(zlib.compress(books.encode())))
+    # print("length of compressed zlib: \n")
+    # print(len(zlib.compress(books.encode())))
     return len(zlib.compress(books.encode()))
 
 #we're calculating the size of each author after compression
@@ -83,5 +83,6 @@ recompressed_lengths = new_books_length(new_book_title,training_data)
 
 
 classification = classify_new_book(compressed_lengths,recompressed_lengths)
-print("Author Name:", classification)
+print("Your book title: '" + new_book_title + "'")
+print("Predicted Author Name:", classification)
 
