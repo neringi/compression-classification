@@ -77,17 +77,18 @@ def classify_new_book(compressed_lengths, recompressed_lengths):
     predicted_author = min(res, key=res.get)
     return predicted_author
 
-# while True:
-#     new_book_title = input("\nEnter the Book Title: ")
-#     if new_book_title.lower() =="exit":
-#         break
-#     else:
-#         compressed_lengths = books_length(training_data)
-#         recompressed_lengths = new_books_length(new_book_title,training_data)
-#         classification = classify_new_book(compressed_lengths,recompressed_lengths)
-#         print("Your book title: '" + new_book_title + "'")
-#         print("Predicted Author Name:", classification)
-        
+print("\n\t ** A Program that Performs Classification By Zipping **\n \nInstructions: \n- Write the book tiltle that you want to classify\n- Once you're done, please type exit")
+while True:
+    new_book_title = input("\nEnter the Book Title: ")
+    if new_book_title.lower() =="exit":
+        break
+    else:
+        compressed_lengths = books_length(training_data)
+        recompressed_lengths = new_books_length(new_book_title,training_data)
+        classification = classify_new_book(compressed_lengths,recompressed_lengths)
+        print("Your book title: '" + new_book_title + "'")
+        print("Predicted Author Name:", classification)
+
 length1 = len("Girl with the Dragon TattooGirl who kicked the Hornet's NestGirl who played with Fire")
 print(length1)
 
