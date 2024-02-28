@@ -92,7 +92,7 @@ while True:
 length1 = len("Girl with the Dragon TattooGirl who kicked the Hornet's NestGirl who played with Fire")
 print(length1)
 
-print(len(zlib.compress(length1)))
+# print(len(zlib.compress(length1)))
 
 # length2 = len("Dickens, CharlesChristmas Carol, A")
 # print(length2)
