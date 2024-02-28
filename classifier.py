@@ -27,7 +27,8 @@ def concatenate_books(titles):
     
     for title in titles:
         concatenated_books += ' ' + title
-
+    
+    print(concatenated_books)
     return concatenated_books
 
 def reconcatenate_books(new_title, titles):
@@ -37,7 +38,7 @@ def reconcatenate_books(new_title, titles):
     for title in titles:
         reconcatenated_books += ' ' + title
     reconcatenated_books += new_title
-
+    print(reconcatenated_books)
     return reconcatenated_books
         
 
@@ -47,8 +48,8 @@ def reconcatenate_books(new_title, titles):
 
 #we’ll compress the data using the zipping technique
 def compress_books(books):
-    # print("length of compressed zlib: \n")
-    # print(len(zlib.compress(books.encode())))
+    print("length of compressed zlib: \n")
+    print(len(zlib.compress(books.encode())))
     return len(zlib.compress(books.encode()))
 
 #we're calculating the size of each author after compression
@@ -76,14 +77,21 @@ def classify_new_book(compressed_lengths, recompressed_lengths):
     predicted_author = min(res, key=res.get)
     return predicted_author
 
-while True:
-    new_book_title = input("\nEnter the Book Title: ")
-    if new_book_title.lower() =="exit":
-        break
-    else:
-        compressed_lengths = books_length(training_data)
-        recompressed_lengths = new_books_length(new_book_title,training_data)
-        classification = classify_new_book(compressed_lengths,recompressed_lengths)
-        print("Your book title: '" + new_book_title + "'")
-        print("Predicted Author Name:", classification)
+# while True:
+#     new_book_title = input("\nEnter the Book Title: ")
+#     if new_book_title.lower() =="exit":
+#         break
+#     else:
+#         compressed_lengths = books_length(training_data)
+#         recompressed_lengths = new_books_length(new_book_title,training_data)
+#         classification = classify_new_book(compressed_lengths,recompressed_lengths)
+#         print("Your book title: '" + new_book_title + "'")
+#         print("Predicted Author Name:", classification)
         
+length1 = len("Girl with the Dragon TattooGirl who kicked the Hornet's NestGirl who played with Fire")
+print(length1)
+
+print(len(zlib.compress(length1)))
+
+# length2 = len("Dickens, CharlesChristmas Carol, A")
+# print(length2)
